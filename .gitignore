@@ -1,0 +1,10 @@
+pycontroller.egg-info/
+dist/
+build/
+*.pyc
+__pycache__/
+*.egg
+*.pkl
+.pytest_cache/
+.coverage
+htmlcov/
