@@ -2,7 +2,7 @@
 Example usage of pycontroller package.
 """
 
-from pycontroller import task_controller, controller
+from taskcontroller import task_controller, controller
 import time
 
 

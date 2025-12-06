@@ -1,4 +1,4 @@
-# PyController
+# TaskController
 
 A Python library for pause/resume/kill control of functions across processes using file-based IPC.
 
@@ -8,23 +8,23 @@ A Python library for pause/resume/kill control of functions across processes usi
 - **Kill**: Terminate function execution gracefully
 - **Cross-Process**: Control functions running in different terminals/processes
 - **Per-Function Control**: Control multiple decorated functions independently
-- **CLI Tool**: Control functions directly from terminal using `pycontroller` command
+- **CLI Tool**: Control functions directly from terminal using `taskController` command
 - **Simple API**: Easy-to-use decorator and control flags
 
 ## Installation
 
 ```bash
-pip install -e .
+pip install taskController
 ```
 
-This installs both the Python library and the `pycontroller` CLI command.
+This installs both the Python library and the `taskController` CLI command.
 
 ## Quick Start
 
 ### Basic Usage
 
 ```python
-from pycontroller import task_controller, controller
+from taskcontroller import task_controller, controller
 import time
 
 @task_controller
@@ -41,25 +41,25 @@ long_running_task()
 
 ```bash
 # List all running functions (like 'ps')
-pycontroller ps
+taskController ps
 
 # Pause a specific function
-pycontroller stop long_running_task
+taskController stop long_running_task
 
 # Resume a specific function
-pycontroller resume long_running_task
+taskController resume long_running_task
 
 # Kill a specific function
-pycontroller kill long_running_task
+taskController kill long_running_task
 
 # See detailed status
-pycontroller status
+taskController status
 ```
 
 ### Controlling from Another Terminal (Python API)
 
 ```python
-from pycontroller import controller
+from taskcontroller import controller
 
 # NEW: Per-function control
 controller.stop_function('long_running_task')    # Pause specific function
@@ -105,15 +105,15 @@ def my_function():
 ### CLI Commands (New in v0.2.0!)
 
 ```bash
-pycontroller ps                    # List all running functions with PID/status
-pycontroller stop <func_name>      # Pause a specific function
-pycontroller resume <func_name>    # Resume a specific function  
-pycontroller kill <func_name>      # Kill a specific function
-pycontroller stop-all              # Pause all functions
-pycontroller resume-all            # Resume all functions
-pycontroller kill-all              # Kill all functions
-pycontroller status [func_name]    # Show detailed status
-pycontroller reset                 # Reset all flags
+taskController ps                    # List all running functions with PID/status
+taskController stop <func_name>      # Pause a specific function
+taskController resume <func_name>    # Resume a specific function  
+taskController kill <func_name>      # Kill a specific function
+taskController stop-all              # Pause all functions
+taskController resume-all            # Resume all functions
+taskController kill-all              # Kill all functions
+taskController status [func_name]    # Show detailed status
+taskController reset                 # Reset all flags
 ```
 
 See [CLI_USAGE.md](CLI_USAGE.md) for detailed CLI documentation.
@@ -242,7 +242,7 @@ See the examples directory for complete usage examples:
 Control multiple decorated functions independently - pause one while others continue running.
 
 ### CLI Integration
-Use the `pycontroller` command from your terminal for easy process management.
+Use the `taskController` command from your terminal for easy process management.
 
 ### Pause with 15-Minute Timeout
 When paused, execution automatically terminates if not resumed within 15 minutes.

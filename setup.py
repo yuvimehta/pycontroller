@@ -1,5 +1,5 @@
 """
-Setup script for pycontroller package.
+Setup script for taskController package.
 """
 
 from setuptools import setup, find_packages
@@ -8,14 +8,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="pycontroller",
-    version="0.2.0",
+    name="taskController",
+    version="0.2.1",
     author="Orangewood Labs",
     author_email="Yuvraj.m@orangewood.co",
     description="A Python library for pause/resume/kill control of functions across processes",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/orangewood-co/robogpt_tools",
+    url="https://github.com/yuvimehta/taskController",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -36,12 +36,12 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'pycontroller=pycontroller.cli:main',
+            'taskController=taskController.cli:main',
         ],
     },
     keywords="flow-control pause resume kill decorator process-control",
     project_urls={
-        "Bug Reports": "https://github.com/orangewood-co/robogpt_tools/issues",
-        "Source": "https://github.com/orangewood-co/robogpt_tools",
+        "Bug Reports": "https://github.com/yuvimehta/taskController/issues",
+        "Source": "https://github.com/yuvimehta/taskController",
     },
 )

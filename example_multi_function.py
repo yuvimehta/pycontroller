@@ -4,7 +4,7 @@ Example usage of pycontroller with multiple functions.
 This demonstrates how to control multiple decorated functions independently.
 """
 
-from pycontroller import task_controller, controller
+from taskcontroller import task_controller, controller
 import time
 
 
