@@ -229,6 +229,7 @@ def task_controller(func: Callable) -> Callable:
         pid = os.getpid()
         
         # Register this function
+        control_flags.reset()
         control_flags.register_function(func_name, pid)
         print(f"[CONTROLLER] Registered function '{func_name}' with PID {pid}")
         
